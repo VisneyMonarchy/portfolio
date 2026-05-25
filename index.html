@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Richard Yaw Kwofie — Education Professional &amp; Pan-African Advocate</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy:      #0B1B2E;
+  --navy-mid:  #112240;
+  --gold:      #C9A84C;
+  --gold-l:    #E8C96A;
+  --gold-pale: #F5E9C8;
+  --teal:      #2A9D8F;
+  --teal-l:    #3BBFAF;
+  --white:     #FFFFFF;
+  --off-white: #F8F6F0;
+  --slate:     #F1F4F8;
+  --text:      #1A1A2E;
+  --sub:       #4A5568;
+  --muted:     #718096;
+  --border:    rgba(201,168,76,0.15);
+  --border-n:  #E8ECF0;
+  --shadow-sm: 0 2px 8px rgba(11,27,46,0.06);
+  --shadow-md: 0 8px 32px rgba(11,27,46,0.10);
+  --shadow-lg: 0 24px 64px rgba(11,27,46,0.14);
+  --radius:    16px;
+  --radius-sm: 8px;
+  --ease:      0.35s cubic-bezier(0.4,0,0.2,1);
+  --ff-head:   'Playfair Display', Georgia, serif;
+  --ff-body:   'Inter', system-ui, sans-serif;
+  --ff-acc:    'Cormorant Garamond', Georgia, serif;
+}
+
+*,*::before,*::after { box-sizing:border-box; margin:0; padding:0 }
+html { scroll-behavior:smooth; font-size:16px }
+body { font-family:var(--ff-body); color:var(--text); background:var(--white); line-height:1.7; overflow-x:hidden; -webkit-font-smoothing:antialiased }
+a { text-decoration:none; color:inherit }
+ul { list-style:none }
+svg { display:block; flex-shrink:0 }
+
+/* ── TYPOGRAPHY ─────────────────────────────── */
+.slabel { font-size:.72rem; font-weight:600; letter-spacing:.2em; text-transform:uppercase; color:var(--gold); margin-bottom:.75rem }
+.slabel-light { color:var(--gold-l) }
+.stitle { font-family:var(--ff-head); font-size:clamp(2rem,4vw,2.75rem); font-weight:700; line-height:1.2; color:var(--navy); margin-bottom:1rem }
+.stitle em { font-style:italic; color:var(--gold); font-weight:400 }
+.stitle-light { color:var(--white) }
+.ssub { font-size:1.05rem; color:var(--sub); max-width:560px }
+.sh { margin-bottom:4rem }
+
+/* ── LAYOUT ─────────────────────────────────── */
+.wrap { max-width:1200px; margin:0 auto; padding:0 2rem }
+.section { padding:6rem 0 }
+
+/* ── BUTTONS ────────────────────────────────── */
+.btn { display:inline-flex; align-items:center; gap:.5rem; padding:.85rem 2rem; border-radius:50px; font-size:.92rem; font-weight:600; letter-spacing:.03em; cursor:pointer; border:none; transition:var(--ease); white-space:nowrap }
+.btn-gold { background:linear-gradient(135deg,var(--gold),#B8893A); color:var(--navy); box-shadow:0 4px 20px rgba(201,168,76,.3) }
+.btn-gold:hover { transform:translateY(-2px); box-shadow:0 8px 32px rgba(201,168,76,.5) }
+.btn-ghost { background:transparent; color:var(--white); border:1.5px solid rgba(255,255,255,.35) }
+.btn-ghost:hover { background:rgba(255,255,255,.08); border-color:rgba(255,255,255,.65); transform:translateY(-2px) }
+.btn-outline { background:transparent; color:var(--navy); border:1.5px solid var(--border-n) }
+.btn-outline:hover { border-color:var(--gold); color:var(--gold); transform:translateY(-2px) }
+
+/* ── NAV ────────────────────────────────────── */
+#nav { position:fixed; top:0; left:0; right:0; z-index:1000; padding:1.25rem 0; transition:var(--ease) }
+#nav.scrolled { background:rgba(11,27,46,.95); backdrop-filter:blur(20px); padding:.85rem 0; box-shadow:0 4px 32px rgba(0,0,0,.18) }
+.nav-in { max-width:1200px; margin:0 auto; padding:0 2rem; display:flex; align-items:center; justify-content:space-between }
+.nav-logo { font-family:var(--ff-head); font-size:1.35rem; font-weight:700; color:var(--gold); letter-spacing:.05em }
+.nav-ul { display:flex; align-items:center; gap:2.5rem }
+.nav-ul a { font-size:.88rem; font-weight:500; color:rgba(255,255,255,.72); letter-spacing:.03em; transition:color var(--ease); position:relative }
+.nav-ul a:not(.ncta)::after { content:''; position:absolute; bottom:-4px; left:0; width:0; height:1.5px; background:var(--gold); transition:width var(--ease) }
+.nav-ul a:not(.ncta):hover { color:var(--white) }
+.nav-ul a:not(.ncta):hover::after { width:100% }
+.ncta { background:var(--gold); color:var(--navy)!important; padding:.5rem 1.4rem; border-radius:50px; font-weight:600; transition:var(--ease)!important }
+.ncta:hover { background:var(--gold-l); transform:translateY(-1px) }
+.ncta::after { display:none!important }
+.nav-toggle { display:none; flex-direction:column; gap:5px; background:none; border:none; cursor:pointer; padding:4px }
+.nav-toggle span { display:block; width:24px; height:2px; background:var(--white); border-radius:2px; transition:var(--ease) }
+
+/* ── HERO ────────────────────────────────────── */
+.hero { min-height:100vh; display:flex; align-items:center; justify-content:center; position:relative; background:var(--navy); overflow:hidden }
+.hero-bg { position:absolute; inset:0; pointer-events:none }
+.hero-orb { position:absolute; border-radius:50%; filter:blur(80px); opacity:.16 }
+.orb1 { width:600px; height:600px; background:radial-gradient(circle,var(--gold) 0%,transparent 70%); top:-200px; right:-100px }
+.orb2 { width:500px; height:500px; background:radial-gradient(circle,var(--teal) 0%,transparent 70%); bottom:-150px; left:-100px }
+.hero-grid { position:absolute; inset:0; background-image:linear-gradient(rgba(201,168,76,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(201,168,76,.04) 1px,transparent 1px); background-size:60px 60px }
+.hero-body { position:relative; z-index:1; text-align:center; padding:8rem 2rem 6rem; max-width:900px }
+.hero-eyebrow { font-size:.75rem; font-weight:600; letter-spacing:.24em; text-transform:uppercase; color:var(--gold); margin-bottom:1.5rem; opacity:0; animation:fadeUp .8s .2s forwards }
+.hero-name { font-family:var(--ff-head); font-size:clamp(3.5rem,9vw,7rem); font-weight:700; line-height:1.05; color:var(--white); margin-bottom:1.5rem; opacity:0; animation:fadeUp .8s .4s forwards }
+.hero-name em { color:var(--gold); font-style:italic; font-weight:400 }
+.hero-tag { font-family:var(--ff-acc); font-size:clamp(1.05rem,2vw,1.3rem); font-weight:300; color:rgba(255,255,255,.6); line-height:1.8; margin-bottom:2.5rem; opacity:0; animation:fadeUp .8s .6s forwards }
+.hero-btns { display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; margin-bottom:4rem; opacity:0; animation:fadeUp .8s .8s forwards }
+.hero-stats { display:flex; align-items:center; justify-content:center; flex-wrap:wrap; background:rgba(255,255,255,.04); border:1px solid rgba(201,168,76,.18); border-radius:20px; padding:1.5rem 2.5rem; backdrop-filter:blur(10px); opacity:0; animation:fadeUp .8s 1s forwards }
+.stat { text-align:center; padding:.5rem 2rem }
+.snum { display:block; font-family:var(--ff-head); font-size:2rem; font-weight:700; color:var(--gold); line-height:1; margin-bottom:.4rem }
+.slab { font-size:.75rem; color:rgba(255,255,255,.45); line-height:1.4 }
+.sdiv { width:1px; height:48px; background:rgba(201,168,76,.18) }
+.scroll-ind { position:absolute; bottom:2.5rem; left:50%; transform:translateX(-50%); display:flex; flex-direction:column; align-items:center; gap:.5rem; color:rgba(255,255,255,.3); font-size:.7rem; letter-spacing:.15em; text-transform:uppercase; animation:floatY 3s ease-in-out infinite }
+.scroll-line { width:1px; height:48px; background:linear-gradient(to bottom,rgba(201,168,76,.55),transparent) }
+
+/* ── ABOUT ───────────────────────────────────── */
+.about { background:var(--off-white) }
+.about-grid { display:grid; grid-template-columns:1fr 1.6fr; gap:6rem; align-items:center }
+.about-card { background:var(--navy); border-radius:var(--radius); padding:3rem 2rem; text-align:center; box-shadow:var(--shadow-lg); position:relative; z-index:1 }
+.about-mono { font-family:var(--ff-head); font-size:3.75rem; font-weight:700; color:var(--gold); margin-bottom:2rem; letter-spacing:.06em; line-height:1 }
+.about-details { display:flex; flex-direction:column; gap:.7rem; text-align:left }
+.arow { display:flex; align-items:center; gap:.75rem; font-size:.88rem; color:rgba(255,255,255,.62) }
+.arow svg { color:var(--gold) }
+.about-badge { position:absolute; top:-1.5rem; right:-1.5rem; width:80px; height:80px; border-radius:50%; background:linear-gradient(135deg,var(--gold),#B8893A); display:flex; align-items:center; justify-content:center; box-shadow:0 8px 24px rgba(201,168,76,.38); z-index:2 }
+.badge-txt { font-family:var(--ff-head); font-size:.68rem; font-weight:700; color:var(--navy); letter-spacing:.04em; text-align:center; line-height:1.35 }
+.focus-wrap { margin-top:2rem; padding-top:1.5rem; border-top:1px solid var(--border) }
+.focus-label { font-size:.75rem; font-weight:600; letter-spacing:.15em; text-transform:uppercase; color:var(--muted); margin-bottom:.75rem }
+.tags { display:flex; flex-wrap:wrap; gap:.5rem }
+.tag { background:var(--gold-pale); color:#8B6914; font-size:.78rem; font-weight:600; padding:.35rem .85rem; border-radius:50px; border:1px solid rgba(201,168,76,.28) }
+.body-lg { font-size:1.08rem; line-height:1.8; color:var(--text); margin-bottom:1.2rem }
+.body-md { font-size:.97rem; line-height:1.8; color:var(--sub); margin-bottom:1rem }
+
+/* ── EXPERIENCE ──────────────────────────────── */
+.experience { background:var(--white) }
+.timeline { position:relative }
+.ti { display:grid; grid-template-columns:24px 1fr; gap:0 2rem; margin-bottom:3rem }
+.ti:last-child { margin-bottom:0 }
+.ti-mark { display:flex; flex-direction:column; align-items:center; padding-top:.35rem }
+.ti-dot { width:14px; height:14px; border-radius:50%; background:var(--gold); border:3px solid var(--white); box-shadow:0 0 0 3px var(--gold); flex-shrink:0; z-index:1 }
+.ti-line { flex:1; width:2px; background:linear-gradient(to bottom,var(--gold),rgba(201,168,76,.08)); margin-top:.5rem }
+.ti-card { background:var(--white); border:1px solid var(--border-n); border-radius:var(--radius); padding:2rem; box-shadow:var(--shadow-sm); transition:box-shadow var(--ease),transform var(--ease) }
+.ti-card:hover { box-shadow:var(--shadow-md); transform:translateY(-2px) }
+.ti-card.cur { border-color:rgba(201,168,76,.3); background:linear-gradient(135deg,#FFFDF6 0%,var(--white) 100%) }
+.ch { display:flex; justify-content:space-between; align-items:flex-start; gap:1rem; margin-bottom:1.2rem; flex-wrap:wrap }
+.cbadge { display:inline-block; font-size:.67rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; padding:.2rem .6rem; border-radius:4px; background:var(--gold-pale); color:#8B6914; margin-bottom:.35rem }
+.ctitle { font-family:var(--ff-head); font-size:1.22rem; font-weight:600; color:var(--navy); margin-bottom:.15rem }
+.corg { font-size:.88rem; color:var(--muted) }
+.cper { font-size:.82rem; font-weight:600; color:var(--gold); white-space:nowrap; background:var(--gold-pale); padding:.28rem .75rem; border-radius:50px; height:fit-content }
+.clist { display:flex; flex-direction:column; gap:.58rem }
+.clist li { font-size:.91rem; color:var(--sub); padding-left:1.2rem; position:relative; line-height:1.6 }
+.clist li::before { content:''; position:absolute; left:0; top:.68em; width:5px; height:5px; border-radius:50%; background:var(--gold) }
+.ctags { display:flex; flex-wrap:wrap; gap:.4rem; margin-top:1.2rem }
+.ctag { font-size:.72rem; font-weight:600; padding:.22rem .65rem; border-radius:4px; background:rgba(42,157,143,.07); color:var(--teal); border:1px solid rgba(42,157,143,.18) }
+
+/* ── PROJECTS (light) ────────────────────────── */
+.projects { background:var(--slate) }
+.proj-card { display:grid; grid-template-columns:1.1fr 1fr; background:var(--white); border:1px solid var(--border-n); border-radius:var(--radius); overflow:hidden; box-shadow:var(--shadow-md) }
+.proj-body { padding:3rem }
+.proj-eye { font-size:.7rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--gold); margin-bottom:.5rem }
+.proj-name { font-family:var(--ff-head); font-size:2.5rem; font-weight:700; color:var(--navy); margin-bottom:1rem; line-height:1.1 }
+.proj-name em { font-style:italic; color:var(--gold); font-weight:400 }
+.proj-desc { font-size:.93rem; color:var(--sub); line-height:1.8; margin-bottom:1.75rem }
+.proj-list { display:flex; flex-direction:column; gap:.65rem; margin-bottom:2rem }
+.proj-list li { font-size:.9rem; color:var(--sub); padding-left:1.2rem; position:relative; line-height:1.65 }
+.proj-list li::before { content:''; position:absolute; left:0; top:.65em; width:5px; height:5px; border-radius:50%; background:var(--teal) }
+.proj-visual { background:var(--navy); display:flex; align-items:center; justify-content:center; position:relative; overflow:hidden }
+.pv-inner { text-align:center; position:relative; z-index:1; padding:2.5rem }
+.pv-icon { color:var(--gold); margin:0 auto 1.25rem; opacity:.9 }
+.pv-domain { font-family:var(--ff-head); font-size:1.4rem; font-weight:700; color:var(--gold) }
+.pv-tag { font-family:var(--ff-acc); font-size:1rem; font-style:italic; font-weight:300; color:rgba(255,255,255,.45); margin-top:.4rem; line-height:1.5 }
+.pv-orb { position:absolute; border-radius:50%; opacity:.1 }
+.pvo1 { width:200px; height:200px; background:var(--gold); top:-70px; right:-70px; filter:blur(40px) }
+.pvo2 { width:140px; height:140px; background:var(--teal); bottom:-40px; left:-40px; filter:blur(30px) }
+
+/* ── EDUCATION ───────────────────────────────── */
+.education { background:var(--white) }
+.edu-grid { display:grid; grid-template-columns:1fr 1fr; gap:2rem }
+.edu-card { background:var(--white); border-radius:var(--radius); padding:2.25rem; box-shadow:var(--shadow-md); border:1px solid var(--border-n); transition:var(--ease) }
+.edu-card:hover { transform:translateY(-3px); box-shadow:var(--shadow-lg) }
+.edu-card.feat { border-color:rgba(201,168,76,.32); background:linear-gradient(135deg,#FFFDF7 0%,var(--white) 100%) }
+.edu-ico { width:48px; height:48px; border-radius:12px; display:flex; align-items:center; justify-content:center; margin-bottom:1.25rem; border:1px solid var(--border-n) }
+.edu-ico.cam { background:rgba(31,73,125,.08); border-color:rgba(31,73,125,.18) }
+.edu-ico.knu { background:rgba(42,157,143,.08); border-color:rgba(42,157,143,.18) }
+.edu-ico svg { width:24px; height:24px }
+.edu-per { font-size:.76rem; font-weight:600; letter-spacing:.05em; color:var(--gold); margin-bottom:.38rem; text-transform:uppercase }
+.edu-deg { font-family:var(--ff-head); font-size:1.12rem; font-weight:600; color:var(--navy); margin-bottom:.28rem; line-height:1.3 }
+.edu-uni { font-size:.9rem; font-weight:600; color:var(--text); margin-bottom:.1rem }
+.edu-loc { font-size:.84rem; color:var(--muted); margin-bottom:1.1rem }
+.edu-hl { font-size:.87rem; color:var(--sub); background:var(--gold-pale); padding:.72rem 1rem; border-radius:var(--radius-sm); border-left:3px solid var(--gold); display:flex; gap:.5rem; align-items:flex-start; line-height:1.6; margin-bottom:.55rem }
+.edu-hl:last-child { margin-bottom:0 }
+.hl-dot { width:6px; height:6px; border-radius:50%; background:var(--gold); margin-top:.52em; flex-shrink:0 }
+
+/* ── HONOURS ─────────────────────────────────── */
+.honours { background:var(--off-white) }
+.hon-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem }
+.hon-card { background:var(--white); border:1px solid var(--border-n); border-radius:var(--radius); padding:2rem 1.5rem; text-align:center; transition:var(--ease); box-shadow:var(--shadow-sm) }
+.hon-card:hover { transform:translateY(-6px); box-shadow:var(--shadow-md); border-color:rgba(201,168,76,.28) }
+.hon-ico { width:52px; height:52px; border-radius:14px; background:var(--gold-pale); border:1px solid rgba(201,168,76,.25); display:flex; align-items:center; justify-content:center; margin:0 auto 1.1rem }
+.hon-ico svg { width:26px; height:26px; color:var(--gold) }
+.hon-card h4 { font-family:var(--ff-head); font-size:1rem; font-weight:600; color:var(--navy); margin-bottom:.7rem; line-height:1.3 }
+.hon-card p { font-size:.84rem; color:var(--sub); line-height:1.65 }
+
+/* ── SKILLS ──────────────────────────────────── */
+.skills { background:var(--white) }
+.sk-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:2rem }
+.sk-group { background:var(--off-white); border-radius:var(--radius); padding:2rem; border:1px solid var(--border-n); transition:var(--ease) }
+.sk-group:hover { box-shadow:var(--shadow-sm) }
+.sk-label { font-size:.72rem; font-weight:700; letter-spacing:.13em; text-transform:uppercase; color:var(--gold); margin-bottom:1rem; padding-bottom:.75rem; border-bottom:1px solid var(--border) }
+.sk-tags { display:flex; flex-wrap:wrap; gap:.45rem }
+.stag { background:var(--white); color:var(--sub); font-size:.8rem; font-weight:500; padding:.33rem .82rem; border-radius:50px; border:1px solid var(--border-n); transition:var(--ease); cursor:default }
+.stag:hover { background:var(--gold-pale); border-color:rgba(201,168,76,.32); color:#8B6914 }
+
+/* ── LEADERSHIP ──────────────────────────────── */
+.leadership { background:var(--off-white) }
+.lead-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.75rem }
+.lead-card { background:var(--white); border-radius:var(--radius); padding:1.75rem; box-shadow:var(--shadow-sm); border:1px solid var(--border-n); position:relative; overflow:hidden; transition:var(--ease) }
+.lead-card::before { content:''; position:absolute; top:0; left:0; right:0; height:3px; background:linear-gradient(90deg,var(--gold),var(--teal)) }
+.lead-card:hover { transform:translateY(-4px); box-shadow:var(--shadow-md) }
+.lead-per { font-size:.74rem; font-weight:700; letter-spacing:.07em; text-transform:uppercase; color:var(--gold); margin-bottom:.45rem }
+.lead-role { font-family:var(--ff-head); font-size:1rem; font-weight:600; color:var(--navy); margin-bottom:.32rem; line-height:1.3 }
+.lead-org { font-size:.84rem; color:var(--sub); line-height:1.55 }
+
+/* ── CONTACT (dark) ──────────────────────────── */
+.contact { background:var(--navy); overflow:hidden; position:relative }
+.contact::before { content:''; position:absolute; top:-200px; right:-200px; width:600px; height:600px; border-radius:50%; background:radial-gradient(circle,rgba(201,168,76,.07) 0%,transparent 70%); pointer-events:none }
+.contact-grid { display:grid; grid-template-columns:1fr 1fr; gap:6rem; align-items:start }
+.contact-body { font-family:var(--ff-acc); font-size:1.2rem; font-weight:300; font-style:italic; color:rgba(255,255,255,.52); line-height:1.8; margin:1.5rem 0 2.5rem }
+.clinks { display:flex; flex-direction:column; gap:1rem }
+.clink { display:flex; align-items:center; gap:.85rem; font-size:.95rem; color:rgba(255,255,255,.68); transition:color var(--ease) }
+.clink:hover { color:var(--gold) }
+.cico { width:40px; height:40px; border-radius:10px; background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.1); display:flex; align-items:center; justify-content:center; flex-shrink:0; transition:var(--ease) }
+.cico svg { width:18px; height:18px }
+.clink:hover .cico { background:rgba(201,168,76,.14); border-color:rgba(201,168,76,.28) }
+.cta-card { background:rgba(255,255,255,.04); border:1px solid rgba(201,168,76,.2); border-radius:var(--radius); padding:2.5rem }
+.cta-card h3 { font-family:var(--ff-head); font-size:1.5rem; font-weight:600; color:var(--white); margin-bottom:1rem; line-height:1.3 }
+.cta-card p { font-size:.92rem; color:rgba(255,255,255,.5); line-height:1.75; margin-bottom:1.75rem }
+
+/* ── FOOTER ──────────────────────────────────── */
+.footer { background:#060F1A; padding:2.5rem 0; border-top:1px solid rgba(255,255,255,.05) }
+.foot-in { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:2rem }
+.foot-logo { font-family:var(--ff-head); font-size:1.4rem; font-weight:700; color:var(--gold) }
+.foot-sub { font-size:.8rem; color:rgba(255,255,255,.36); margin-top:.28rem }
+.foot-links { display:flex; gap:1.75rem; flex-wrap:wrap }
+.foot-links a { font-size:.82rem; color:rgba(255,255,255,.38); transition:color var(--ease) }
+.foot-links a:hover { color:var(--gold) }
+.foot-copy { font-size:.76rem; color:rgba(255,255,255,.22); width:100%; text-align:center; padding-top:1rem; border-top:1px solid rgba(255,255,255,.04); margin-top:.5rem }
+
+/* ── ANIMATIONS ──────────────────────────────── */
+@keyframes fadeUp { from{opacity:0;transform:translateY(24px)} to{opacity:1;transform:translateY(0)} }
+@keyframes floatY { 0%,100%{transform:translateX(-50%) translateY(0)} 50%{transform:translateX(-50%) translateY(-8px)} }
+.reveal { opacity:0; transform:translateY(30px); transition:opacity .7s ease,transform .7s ease }
+.reveal.in { opacity:1; transform:translateY(0) }
+
+/* ── RESPONSIVE ──────────────────────────────── */
+@media(max-width:1024px) {
+  .about-grid { grid-template-columns:1fr; gap:3rem }
+  .about-card { max-width:380px; margin:0 auto }
+  .edu-grid { grid-template-columns:1fr }
+  .contact-grid { grid-template-columns:1fr; gap:3.5rem }
+  .hon-grid { grid-template-columns:1fr 1fr }
+  .lead-grid { grid-template-columns:1fr 1fr }
+  .sk-grid { grid-template-columns:1fr }
+  .proj-card { grid-template-columns:1fr }
+}
+@media(max-width:768px) {
+  .section { padding:4rem 0 }
+  .hero-stats { gap:0 }
+  .stat { padding:.5rem 1rem }
+  .sdiv { display:none }
+  .nav-ul { display:none; position:fixed; top:0; left:0; right:0; bottom:0; background:var(--navy); flex-direction:column; justify-content:center; align-items:center; gap:2rem; z-index:999 }
+  .nav-ul.open { display:flex }
+  .nav-ul a { font-size:1.2rem }
+  .nav-toggle { display:flex; z-index:1000 }
+  .ti { grid-template-columns:16px 1fr; gap:0 1rem }
+  .hon-grid { grid-template-columns:1fr }
+  .lead-grid { grid-template-columns:1fr }
+  .proj-visual { min-height:220px }
+}
+@media(max-width:480px) {
+  .hero-actions { flex-direction:column; align-items:center }
+  .hero-stats { flex-direction:column; padding:1.25rem; gap:.5rem }
+  .sdiv { display:block; width:60%; height:1px }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="nav-in">
+    <a href="#hero" class="nav-logo">RYK</a>
+    <ul class="nav-ul" id="navUl">
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">AfriPath</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#honours">Honours</a></li>
+      <li><a href="#contact" class="ncta">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-bg">
+    <div class="hero-orb orb1"></div>
+    <div class="hero-orb orb2"></div>
+    <div class="hero-grid"></div>
+  </div>
+  <div class="hero-body">
+    <p class="hero-eyebrow">Education Professional &middot; Pan-African Advocate &middot; Cambridge Graduate</p>
+    <h1 class="hero-name">Richard <em>Yaw</em><br>Kwofie</h1>
+    <p class="hero-tag">
+      Bridging academic excellence with community impact &mdash;<br>
+      from the halls of Cambridge to the heart of African student empowerment.
+    </p>
+    <div class="hero-btns">
+      <a href="#about" class="btn btn-gold">Explore My Work</a>
+      <a href="#contact" class="btn btn-ghost">Get in Touch</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><span class="snum">1st</span><span class="slab">Class Honours<br>KNUST</span></div>
+      <div class="sdiv"></div>
+      <div class="stat"><span class="snum">100+</span><span class="slab">Partner Agencies<br>Engaged Globally</span></div>
+      <div class="sdiv"></div>
+      <div class="stat"><span class="snum">200+</span><span class="slab">Students<br>Supported</span></div>
+      <div class="sdiv"></div>
+      <div class="stat"><span class="snum">3</span><span class="slab">Continents of<br>Professional Work</span></div>
+    </div>
+  </div>
+  <div class="scroll-ind">
+    <div class="scroll-line"></div>
+    <span>Scroll</span>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about section" id="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="reveal">
+        <div class="about-card">
+          <div class="about-mono">RYK</div>
+          <div class="about-details">
+            <div class="arow">
+              <svg width="10" height="10" viewBox="0 0 10 10" fill="currentColor"><polygon points="5,0 10,5 5,10 0,5"/></svg>
+              <span>MPhil, Development Studies</span>
+            </div>
+            <div class="arow">
+              <svg width="10" height="10" viewBox="0 0 10 10" fill="currentColor"><polygon points="5,0 10,5 5,10 0,5"/></svg>
+              <span>University of Cambridge</span>
+            </div>
+            <div class="arow">
+              <svg width="10" height="10" viewBox="0 0 10 10" fill="currentColor"><polygon points="5,0 10,5 5,10 0,5"/></svg>
+              <span>Mastercard Foundation Scholar</span>
+            </div>
+            <div class="arow">
+              <svg width="10" height="10" viewBox="0 0 10 10" fill="currentColor"><polygon points="5,0 10,5 5,10 0,5"/></svg>
+              <span>Co-Founder, AfriPath</span>
+            </div>
+            <div class="arow">
+              <svg width="10" height="10" viewBox="0 0 10 10" fill="currentColor"><polygon points="5,0 10,5 5,10 0,5"/></svg>
+              <span>Cambridge &rarr; Ghana (relocating)</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-badge">
+          <div class="badge-txt">MCF<br>Scholar</div>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="slabel">About Me</div>
+        <h2 class="stitle">A Scholar Who Gives <em>Back</em></h2>
+        <p class="body-lg">I am a higher education professional and Mastercard Foundation Scholar alumnus who believes deeply that access to quality education is the most powerful lever for African development.</p>
+        <p class="body-md">After graduating as the Overall Best Student from KNUST with a First-Class in Political Studies, I earned a place at St&nbsp;John&rsquo;s College, Cambridge, completing an MPhil in Development Studies on full African Student Scholarship. That journey gave me not just knowledge, but a profound understanding of what scholarship and mentorship mean to a young African navigating elite international systems &mdash; often alone.</p>
+        <p class="body-md">Today I channel that experience into my professional work and into AfriPath, a platform I co-founded to ensure the path I walked is clearer for those who come after. I thrive at the intersection of student support, virtual programme coordination, and Pan-African community building.</p>
+        <div class="focus-wrap">
+          <div class="focus-label">Focus Areas</div>
+          <div class="tags">
+            <span class="tag">Higher Education Access</span>
+            <span class="tag">Virtual Engagement</span>
+            <span class="tag">Student Advising</span>
+            <span class="tag">African Development</span>
+            <span class="tag">Scholarship Coordination</span>
+            <span class="tag">Online Community Building</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section class="experience section" id="experience">
+  <div class="wrap">
+    <div class="sh reveal">
+      <div class="slabel">Career Journey</div>
+      <h2 class="stitle">Professional <em>Experience</em></h2>
+      <p class="ssub">A trajectory shaped by student-centred work, cross-cultural coordination, and virtual engagement across Europe, Africa, and Latin America.</p>
+    </div>
+    <div class="timeline">
+
+      <div class="ti reveal">
+        <div class="ti-mark"><div class="ti-dot"></div><div class="ti-line"></div></div>
+        <div class="ti-card cur">
+          <div class="ch">
+            <div>
+              <span class="cbadge">Current Role</span>
+              <div class="ctitle">Student Recruitment Officer</div>
+              <div class="corg">Anglia Ruskin University College &middot; Cambridge, UK</div>
+            </div>
+            <span class="cper">July 2024 &ndash; Present</span>
+          </div>
+          <ul class="clist">
+            <li>Primary virtual point of contact for prospective students, agents, and institutional partners across Europe, Latin America, and East and South Africa</li>
+            <li>Led the Navitas Annual Global Webinar (2025) &mdash; designing and delivering live presentations to 80+ partner agencies worldwide on admissions, student support, and academic programmes</li>
+            <li>Organised and facilitated onboarding for 18 new agencies in East and South Africa; refresher sessions for 100+ partner agencies since 2024</li>
+            <li>Coordinated cross-institutional training for 35 school counsellors in Bogot&aacute;, Colombia, in collaboration with the International Office</li>
+            <li>Drives data-informed strategy using Salesforce (pipeline management, segmented campaigns) and Power BI (conversion funnels, market dashboards, ROI reporting)</li>
+            <li>Leads entry requirements benchmarking across four competitor universities to ensure competitive, consistent positioning</li>
+          </ul>
+          <div class="ctags">
+            <span class="ctag">Salesforce</span>
+            <span class="ctag">Power BI</span>
+            <span class="ctag">Virtual Facilitation</span>
+            <span class="ctag">Multi-Timezone</span>
+            <span class="ctag">Programme Coordination</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="ti reveal">
+        <div class="ti-mark"><div class="ti-dot"></div><div class="ti-line"></div></div>
+        <div class="ti-card">
+          <div class="ch">
+            <div>
+              <div class="ctitle">Student Ambassador</div>
+              <div class="corg">St John&rsquo;s College, University of Cambridge &middot; Cambridge, UK</div>
+            </div>
+            <span class="cper">Oct 2023 &ndash; June 2024</span>
+          </div>
+          <ul class="clist">
+            <li>Represented St John&rsquo;s College at open days, course taster events, and applicant days, delivering presentations to students, families, and school counsellors</li>
+            <li>Conducted campus tours for 50+ prospective students, communicating the student journey from application to graduation</li>
+            <li>Provided structured feedback to college staff on prospective students&rsquo; concerns, directly informing recruitment strategy improvements</li>
+          </ul>
+          <div class="ctags"><span class="ctag">Student Engagement</span><span class="ctag">Academic Events</span></div>
+        </div>
+      </div>
+
+      <div class="ti reveal">
+        <div class="ti-mark"><div class="ti-dot"></div><div class="ti-line"></div></div>
+        <div class="ti-card">
+          <div class="ch">
+            <div>
+              <div class="ctitle">Teaching &amp; Research Assistant</div>
+              <div class="corg">Kwame Nkrumah University of Science and Technology &middot; Ghana</div>
+            </div>
+            <span class="cper">Oct 2021 &ndash; Sept 2022</span>
+          </div>
+          <ul class="clist">
+            <li>Delivered weekly tutorials to cohorts of 200+ students across Politics &amp; Development, Research Methods in Political Science, and Public Policy Analysis</li>
+            <li>Served as primary point of contact for students navigating academic processes, progression, and assessment &mdash; providing personalised academic support</li>
+            <li>Coordinated academic events and student sessions in close collaboration with faculty, fostering peer learning</li>
+            <li>Conducted assessments, maintained accurate student records, and produced data reports to support departmental decision-making</li>
+          </ul>
+          <div class="ctags"><span class="ctag">Student Advising</span><span class="ctag">Academic Support</span><span class="ctag">Record Management</span></div>
+        </div>
+      </div>
+
+      <div class="ti reveal">
+        <div class="ti-mark"><div class="ti-dot"></div></div>
+        <div class="ti-card">
+          <div class="ch">
+            <div>
+              <div class="ctitle">Administrative Assistant</div>
+              <div class="corg">Sam and Brothers Company Limited &middot; Kumasi, Ghana</div>
+            </div>
+            <span class="cper">Oct 2022 &ndash; Sept 2023</span>
+          </div>
+          <ul class="clist">
+            <li>Managed multi-channel stakeholder communications as primary client contact, ensuring professional and timely resolution of inquiries</li>
+            <li>Maintained CRM-equivalent database systems; developed feedback mechanisms to assess client satisfaction and drive service improvement</li>
+          </ul>
+          <div class="ctags"><span class="ctag">CRM Management</span><span class="ctag">Stakeholder Communication</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="projects section" id="projects">
+  <div class="wrap">
+    <div class="sh reveal">
+      <div class="slabel">Signature Initiative</div>
+      <h2 class="stitle">Building What I <em>Wished</em> Existed</h2>
+      <p class="ssub">AfriPath is the platform I co-founded because I know exactly what it means to search for opportunities without a roadmap.</p>
+    </div>
+    <div class="proj-card reveal">
+      <div class="proj-body">
+        <div class="proj-eye">Live Platform &middot; Co-Founded January 2026</div>
+        <h3 class="proj-name">Afri<em>Path</em></h3>
+        <p class="proj-desc">A free digital platform connecting African students with global scholarship opportunities, low-deposit universities in the UK, USA, and Canada, and a peer mentorship network pairing aspiring scholars with experienced alumni.</p>
+        <ul class="proj-list">
+          <li>Scholarship discovery engine curated for African students worldwide</li>
+          <li>Peer mentorship pipeline &mdash; alumni paired with aspiring scholars</li>
+          <li>University access portal: low-deposit institutions in UK, USA &amp; Canada</li>
+          <li>Virtual community management and online engagement facilitation</li>
+          <li>Instructional content design and digital strategy</li>
+        </ul>
+        <a href="https://afripath.net" class="btn btn-gold" target="_blank" rel="noopener">Visit afripath.net</a>
+      </div>
+      <div class="proj-visual">
+        <div class="pv-orb pvo1"></div>
+        <div class="pv-orb pvo2"></div>
+        <div class="pv-inner">
+          <!-- Globe SVG (Heroicons outline, MIT) -->
+          <div class="pv-icon">
+            <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/>
+              <path d="M2 12h20"/>
+              <path d="M12 2c-2.5 3-4 6.5-4 10s1.5 7 4 10"/>
+              <path d="M12 2c2.5 3 4 6.5 4 10s-1.5 7-4 10"/>
+            </svg>
+          </div>
+          <div class="pv-domain">afripath.net</div>
+          <div class="pv-tag">Scholarship &amp; Mentorship Hub<br>for African Students</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section class="education section" id="education">
+  <div class="wrap">
+    <div class="sh reveal">
+      <div class="slabel">Academic Background</div>
+      <h2 class="stitle">Education &amp; <em>Formation</em></h2>
+      <p class="ssub">From the top of his undergraduate class in Ghana to postgraduate study at one of the world&rsquo;s great universities.</p>
+    </div>
+    <div class="edu-grid">
+      <div class="edu-card feat reveal">
+        <!-- Building (Heroicons outline, MIT) -->
+        <div class="edu-ico cam">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#1F497D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0 0 12 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75z"/>
+          </svg>
+        </div>
+        <div class="edu-per">Oct 2023 &ndash; June 2024</div>
+        <div class="edu-deg">MPhil in Development Studies</div>
+        <div class="edu-uni">University of Cambridge</div>
+        <div class="edu-loc">St John&rsquo;s College &middot; Cambridge, United Kingdom</div>
+        <div class="edu-hl"><div class="hl-dot"></div>African Student Scholarship, 2023 &mdash; one of two bursaries awarded by the Centre of Development Studies</div>
+      </div>
+      <div class="edu-card reveal">
+        <!-- Graduation cap (Heroicons outline, MIT) -->
+        <div class="edu-ico knu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#2A9D8F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.627 48.627 0 0 1 12 20.904a48.627 48.627 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.57 50.57 0 0 0-2.658-.813A59.905 59.905 0 0 1 12 3.493a59.902 59.902 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5"/>
+          </svg>
+        </div>
+        <div class="edu-per">Sept 2017 &ndash; Nov 2021</div>
+        <div class="edu-deg">BA Political Studies &mdash; First Class Honours</div>
+        <div class="edu-uni">Kwame Nkrumah University of Science and Technology</div>
+        <div class="edu-loc">KNUST &middot; Ghana</div>
+        <div class="edu-hl"><div class="hl-dot"></div>Overall Best Graduating Student across approximately 300 graduates, cohort 2017&ndash;2021</div>
+        <div class="edu-hl"><div class="hl-dot"></div>Mastercard Foundation Scholar, 2017 &mdash; fully funded undergraduate scholarship</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HONOURS -->
+<section class="honours section" id="honours">
+  <div class="wrap">
+    <div class="sh reveal">
+      <div class="slabel">Recognition</div>
+      <h2 class="stitle">Awards &amp; <em>Distinctions</em></h2>
+    </div>
+    <div class="hon-grid">
+      <div class="hon-card reveal">
+        <div class="hon-ico">
+          <!-- Star (Heroicons outline, MIT) -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5z"/>
+          </svg>
+        </div>
+        <h4>Mastercard Foundation Scholar</h4>
+        <p>Recipient of the Mastercard Foundation Scholarship at KNUST, 2017, fully funding undergraduate studies in Political Studies.</p>
+      </div>
+      <div class="hon-card reveal">
+        <div class="hon-ico">
+          <!-- Trophy (Heroicons outline, MIT) -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M16.5 18.75h-9m9 0a3 3 0 0 1 3 3h-15a3 3 0 0 1 3-3m9 0v-3.375c0-.621-.503-1.125-1.125-1.125h-.871M7.5 18.75v-3.375c0-.621.504-1.125 1.125-1.125h.872m5.007 0H9.497m5.007 0a7.454 7.454 0 0 1-.982-3.172M9.497 14.25a7.454 7.454 0 0 0 .981-3.172M5.25 4.236c-.982.143-1.954.317-2.916.52A6.003 6.003 0 0 0 7.73 9.728M5.25 4.236V4.5c0 2.108.966 3.99 2.48 5.228M5.25 4.236V2.721C7.456 2.41 9.71 2.25 12 2.25c2.291 0 4.545.16 6.75.47v1.516M7.73 9.728a6.726 6.726 0 0 0 2.748 1.35m8.272-6.842V4.5c0 2.108-.966 3.99-2.48 5.228m2.48-5.492a46.32 46.32 0 0 1 2.916.52 6.003 6.003 0 0 1-5.395 4.972m0 0a6.726 6.726 0 0 1-2.749 1.35m0 0a6.772 6.772 0 0 1-3.044 0"/>
+          </svg>
+        </div>
+        <h4>Overall Best Graduating Student</h4>
+        <p>Recognised as the top student across the entire 2017&ndash;2021 Political Studies cohort of approximately 300 graduates at KNUST.</p>
+      </div>
+      <div class="hon-card reveal">
+        <div class="hon-ico">
+          <!-- Badge/check circle (Heroicons outline, MIT) -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 12.75 11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043A3.745 3.745 0 0 1 12 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 0 1-3.296-1.043 3.745 3.745 0 0 1-1.043-3.296A3.745 3.745 0 0 1 3 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 0 1 1.043-3.296 3.746 3.746 0 0 1 3.296-1.043A3.746 3.746 0 0 1 12 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 0 1 3.296 1.043 3.746 3.746 0 0 1 1.043 3.296A3.745 3.745 0 0 1 21 12z"/>
+          </svg>
+        </div>
+        <h4>African Student Scholarship</h4>
+        <p>One of two bursaries awarded by the Centre of Development Studies, University of Cambridge, 2023, supporting MPhil studies at St John&rsquo;s College.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section class="skills section" id="skills">
+  <div class="wrap">
+    <div class="sh reveal">
+      <div class="slabel">Capabilities</div>
+      <h2 class="stitle">Skills &amp; <em>Tools</em></h2>
+    </div>
+    <div class="sk-grid">
+      <div class="sk-group reveal">
+        <div class="sk-label">Virtual Engagement &amp; Coordination</div>
+        <div class="sk-tags">
+          <span class="stag">Webinar Facilitation</span>
+          <span class="stag">Online Programme Coordination</span>
+          <span class="stag">Virtual Community Building</span>
+          <span class="stag">Multi-Timezone Collaboration</span>
+          <span class="stag">Orientation Design</span>
+          <span class="stag">Group Facilitation</span>
+        </div>
+      </div>
+      <div class="sk-group reveal">
+        <div class="sk-label">Student Support &amp; Advising</div>
+        <div class="sk-tags">
+          <span class="stag">Academic Advising</span>
+          <span class="stag">Scholarship Administration</span>
+          <span class="stag">Intervention Coordination</span>
+          <span class="stag">Cross-Cultural Communication</span>
+          <span class="stag">Performance Monitoring</span>
+          <span class="stag">Personalised Student Support</span>
+        </div>
+      </div>
+      <div class="sk-group reveal">
+        <div class="sk-label">Data, Systems &amp; Operations</div>
+        <div class="sk-tags">
+          <span class="stag">Salesforce CRM</span>
+          <span class="stag">Power BI</span>
+          <span class="stag">Pipeline Management</span>
+          <span class="stag">Database Management</span>
+          <span class="stag">Reporting &amp; Analytics</span>
+          <span class="stag">Budget Tracking</span>
+        </div>
+      </div>
+      <div class="sk-group reveal">
+        <div class="sk-label">Digital &amp; Content</div>
+        <div class="sk-tags">
+          <span class="stag">Digital Marketing</span>
+          <span class="stag">Instructional Content Design</span>
+          <span class="stag">Social Media Strategy</span>
+          <span class="stag">Google Workspace</span>
+          <span class="stag">Microsoft Office Suite</span>
+          <span class="stag">Zoom &amp; Virtual Platforms</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LEADERSHIP -->
+<section class="leadership section" id="leadership">
+  <div class="wrap">
+    <div class="sh reveal">
+      <div class="slabel">Community &amp; Service</div>
+      <h2 class="stitle">Leadership <em>Roles</em></h2>
+      <p class="ssub">Service to community has been a constant thread &mdash; from leading student governance in Ghana to representing the Ghanaian diaspora at Cambridge.</p>
+    </div>
+    <div class="lead-grid">
+      <div class="lead-card reveal">
+        <div class="lead-per">2023 &ndash; 2024</div>
+        <div class="lead-role">Deputy Event Coordinator</div>
+        <div class="lead-org">Cambridge University Ghanaian Society, University of Cambridge</div>
+      </div>
+      <div class="lead-card reveal">
+        <div class="lead-per">2020 &ndash; 2021</div>
+        <div class="lead-role">Judicial &amp; Disciplinary Committee Chairperson</div>
+        <div class="lead-org">Mastercard Foundation Scholars Community, KNUST</div>
+      </div>
+      <div class="lead-card reveal">
+        <div class="lead-per">2020 &ndash; 2021</div>
+        <div class="lead-role">Speaker of Parliament</div>
+        <div class="lead-org">Political Science Students&rsquo; Association Parliament, KNUST</div>
+      </div>
+      <div class="lead-card reveal">
+        <div class="lead-per">2019 &ndash; 2020</div>
+        <div class="lead-role">Public Relations Officer</div>
+        <div class="lead-org">Political Science Students&rsquo; Association Parliament, KNUST</div>
+      </div>
+      <div class="lead-card reveal">
+        <div class="lead-per">2019 &ndash; 2020</div>
+        <div class="lead-role">Deputy Academic Board Chairperson</div>
+        <div class="lead-org">College of Humanities &amp; Social Sciences, KNUST</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact section" id="contact">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div class="reveal">
+        <div class="slabel slabel-light">Get in Touch</div>
+        <h2 class="stitle stitle-light">Let&rsquo;s <em>Connect</em></h2>
+        <p class="contact-body">Whether it&rsquo;s a collaboration, an opportunity in African education, or simply a conversation &mdash; I&rsquo;m always open.</p>
+        <div class="clinks">
+          <a href="mailto:richardkwofiemonarchy@gmail.com" class="clink">
+            <div class="cico">
+              <!-- Envelope (Heroicons outline, MIT) -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/>
+              </svg>
+            </div>
+            <span>richardkwofiemonarchy@gmail.com</span>
+          </a>
+          <a href="tel:+447917813388" class="clink">
+            <div class="cico">
+              <!-- Phone (Heroicons outline, MIT) -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25z"/>
+              </svg>
+            </div>
+            <span>+44 7917 813388</span>
+          </a>
+          <a href="https://linkedin.com/in/richardkwofie" target="_blank" rel="noopener" class="clink">
+            <div class="cico">
+              <!-- Link (Heroicons outline, MIT) -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244"/>
+              </svg>
+            </div>
+            <span>linkedin.com/in/richardkwofie</span>
+          </a>
+          <a href="https://afripath.net" target="_blank" rel="noopener" class="clink">
+            <div class="cico">
+              <!-- Globe (Heroicons outline, MIT) -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418"/>
+              </svg>
+            </div>
+            <span>afripath.net</span>
+          </a>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="cta-card">
+          <div class="slabel slabel-light" style="margin-bottom:.85rem">Open To</div>
+          <h3>Student Support &amp; Programme Coordination Roles</h3>
+          <p>I am actively seeking full-time roles in higher education coordination, student success, and African education access &mdash; and am prepared to relocate within Africa immediately.</p>
+          <a href="mailto:richardkwofiemonarchy@gmail.com" class="btn btn-gold" style="width:100%;justify-content:center">Send a Message</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="foot-in">
+      <div>
+        <div class="foot-logo">Richard Yaw Kwofie</div>
+        <div class="foot-sub">MPhil, University of Cambridge &middot; Mastercard Foundation Scholar</div>
+      </div>
+      <nav class="foot-links">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">AfriPath</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+    <div class="foot-copy">&copy; 2026 Richard Yaw Kwofie &middot; Cambridge, UK</div>
+  </div>
+</footer>
+
+<script>
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 60), {passive:true});
+
+const toggle = document.getElementById('navToggle');
+const ul = document.getElementById('navUl');
+toggle.addEventListener('click', () => ul.classList.toggle('open'));
+ul.querySelectorAll('a').forEach(a => a.addEventListener('click', () => ul.classList.remove('open')));
+
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in') });
+}, {threshold:0.1, rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.reveal').forEach((el, i) => {
+  const parent = el.parentElement;
+  const siblings = [...parent.querySelectorAll('.reveal')];
+  const idx = siblings.indexOf(el);
+  if (idx > 0) el.style.transitionDelay = `${idx * 0.09}s`;
+  io.observe(el);
+});
+</script>
+</body>
+</html>
